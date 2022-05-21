@@ -14,6 +14,6 @@ ENTRYPOINT exec java $JAVA_OPTS -jar app.jar
 #
 FROM openjdk:11-jre-slim
 COPY --from=build /opt/target/discovery-0.0.1-SNAPSHOT.jar /usr/local/lib/discovery.jar
-ENV PORT 8002
-EXPOSE 8002
+ENV PORT 8761
+EXPOSE 8761
 ENTRYPOINT ["java","-jar","/usr/local/lib/discovery.jar"]
